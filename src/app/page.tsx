@@ -3,6 +3,7 @@ import { MentorJourney } from "@/components/mentor/MentorJourney";
 import { HeroGLTarget, ScrollIndicator } from "@/components/mentor/HeroDistortion";
 import WebGLBackgroundWrapper from "@/components/ui/WebGLBackgroundWrapper";
 import { HeroSearch } from "@/components/ui/HeroSearch";
+import { MobileNav } from "@/components/ui/MobileNav";
 import { ScrollProgressTracker } from "@/components/ui/ScrollProgressTracker";
 import { MENTORS } from "@/data/mentors";
 
@@ -100,7 +101,10 @@ export default function Home() {
                 ChronoCoder
               </span>
             </div>
-            <nav className="hidden md:flex items-center gap-8 text-sm">
+            <nav
+              aria-label="Primary"
+              className="hidden md:flex items-center gap-8 text-sm"
+            >
               <a
                 href="#mentors"
                 style={{ color: "var(--fg-mid)" }}
@@ -125,6 +129,7 @@ export default function Home() {
                 GitHub
               </a>
             </nav>
+            <MobileNav />
           </div>
         </header>
 
