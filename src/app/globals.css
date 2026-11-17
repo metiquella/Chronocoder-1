@@ -124,6 +124,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/*
+ * Honour the OS-level "reduce motion" preference (#314). Without this the
+ * smooth scrolling above wins over the user's setting, so anchor jumps and
+ * scroll restoration keep animating.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background: var(--bg);
   color: var(--fg);
